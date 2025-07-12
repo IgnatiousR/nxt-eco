@@ -1,12 +1,14 @@
 // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 import ProductList from "@/components/shared/product/product-list";
-import sampleData from "@/db/sample-data";
-const Homepage = () => {
+import { getLatestProducts } from "@/lib/actions/product.action";
+
+const Homepage = async () => {
+  const latestProducts = await getLatestProducts();
   return (
     <>
-      <ProductList data={sampleData.products} title='Newest Arrivals' limit={4}/>
+      <ProductList data={latestProducts} title="Newest Arrivals" limit={4} />
     </>
   );
-}
- 
+};
+
 export default Homepage;
