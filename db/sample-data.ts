@@ -1,4 +1,21 @@
+import { hashSync } from "bcrypt-ts-edge";
+
 const sampleData = {
+  users: [
+    {
+      name: 'Admin',
+      email: 'admin@example.com',
+      password: hashSync('123456', 10),
+      role: 'admin'
+    },
+    {
+      name: 'John Doe',
+      email: 'john@gmail.com',
+      password: hashSync('johndoe', 10),
+      role: 'user'
+    }
+  ],
+
   products: [
     {
       name: 'Polo Sporting Stretch Shirt',
@@ -6,8 +23,10 @@ const sampleData = {
       category: "Men's Dress Shirts",
       description: 'Classic Polo style with modern comfort',
       images: [
-        '/images/sample-products/p1-1.jpg',
-        '/images/sample-products/p1-2.jpg',
+        // '/images/sample-products/p1-1.jpg',
+        // '/images/sample-products/p1-2.jpg',
+        'https://ik.imagekit.io/hwecbxsdh/nxt-eco-images/p1-1.jpg',
+        'https://ik.imagekit.io/hwecbxsdh/nxt-eco-images/p1-2.jpg',
       ],
       price: 59.99,
       brand: 'Polo',
