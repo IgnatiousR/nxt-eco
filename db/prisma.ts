@@ -34,11 +34,11 @@ export const prisma = new PrismaClient({
           return product.rating.toString();
         },
       },
-      // dicountAmount: {
-      //   compute(product: Product) {
-      //     return product.discountAmount.toString();
-      //   },
-      // },
+      dicountAmount: {
+        compute(product) {
+          return product.discountAmount.toString();
+        },
+      },
     },
   },
 });
