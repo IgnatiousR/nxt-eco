@@ -34,7 +34,7 @@ export const prisma = new PrismaClient({
           return product.rating.toString();
         },
       },
-      dicountAmount: {
+      discountAmount: {
         compute(product) {
           return product.discountAmount.toString();
         },
