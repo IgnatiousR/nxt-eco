@@ -21,5 +21,5 @@ export const insertProductSchema = z.object({
   banner: z.string().nullable(),
   price: currency,
   discountType: z.string().nullable(),
-  discountAmount: z.string().nullable(),
+  discountAmount: currency,
 });
