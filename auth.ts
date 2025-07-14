@@ -86,7 +86,7 @@ export const config = {
       }
       return token;
     },
-    authorized({request, auth}:any){
+    authorized({request, auth}:any) {
       //Check for session cart cookie
       if(!request.cookies.get('sessionCartId')){
         //Generate new session cart id cookie
